@@ -1,0 +1,94 @@
+@media screen and (max-width: 1400px) {
+    .custom-header {
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            height: 190px;
+            width: 190px;
+        }
+
+        .carousel-control-prev {
+            left: -95px;
+        }
+
+        .carousel-control-next {
+            right: -95px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .custom-header {
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            height: 160px;
+            width: 160px;
+        }
+
+        .carousel-control-prev {
+            left: -80px;
+        }
+
+        .carousel-control-next {
+            right: -80px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .custom-header {
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            height: 140px;
+            width: 140px;
+        }
+
+        .carousel-control-prev {
+            left: -70px;
+        }
+
+        .carousel-control-next {
+            right: -70px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .custom-header {
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            height: 120px;
+            width: 120px;
+        }
+
+        .carousel-control-prev {
+            left: -60px;
+        }
+
+        .carousel-control-next {
+            right: -60px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .custom-header {
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            height: 100px;
+            width: 100px;
+        }
+
+        .carousel-control-prev {
+            left: -50px;
+        }
+
+        .carousel-control-next {
+            right: -50px;
+        }
+    }
+}

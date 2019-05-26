@@ -1,0 +1,309 @@
+@import "./variables";
+@import "./mixin";
+
+
+.custom-header {
+    @include paddingSides(0px);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    .control-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        height: 208px;
+        width: 208px;
+        top: 40%;
+        border-radius: 50%;
+        background: #fff;
+    }
+
+    .carousel-control-prev {
+        left: -104px;
+        justify-content: flex-end;
+
+        .carousel-control-prev-icon {
+            background-image: url('../images/left.png');
+            height: 30px;
+            width: 30px;
+            margin-right: 40px;
+        }
+    }
+
+    .carousel-control-next {
+        right: -104px;
+        justify-content: flex-start;
+
+        .carousel-control-next-icon {
+            background-image: url('../images/right.png');
+            height: 30px;
+            width: 30px;
+            margin-left: 40px;
+        }
+    }
+
+
+    .carousel-item {
+        height: 100vh;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .date {
+            @include flexbox(space-around, flex-end);
+            flex-direction: column;
+            position: absolute;
+            right: 45px;
+            bottom: 45px;
+
+            p:first-child {
+                font-family: 'Roboto Condensed';
+                font-size: 72px;
+                color: $White;
+            }
+
+            p {
+                font-family: 'Roboto Light';
+                font-size: 38px;
+                color: $White;
+            }
+        }
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        padding: 30px 30px 0 30px;
+        max-height: 190px;
+        z-index: 99999;
+        align-items: end;
+
+        .navbar-brand {
+            max-height: 150px;
+            height: 100px;
+            width: auto;
+            margin-top: -6px;
+            z-index: 33333;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+
+            .logo-img {
+                display: block;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .hidden {
+                opacity: 0;
+            }
+        }
+
+        .navbar-nav {
+            @include flexbox(center, flex-start);
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 100%;
+            z-index: 0;
+            background: gray;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+
+            .nav-item {
+                margin-left: 280px;
+            }
+
+            .nav-link {
+                font-family: 'Roboto Condensed';
+                font-size: 72px;
+                color: $Black;
+                transition: all 1s ease-in-out;
+            }
+        }
+
+        .navbar-nav-active {
+            height: 100vh;
+            opacity: 0.9;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .Burgeractive .line1 {
+            transform: rotate(-45deg) translate(-16px, 16px);
+            background: $Red;
+        }
+
+        .Burgeractive .line2 {
+
+            z-index: 99999;
+            opacity: 0;
+        }
+
+        .Burgeractive .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+            background: $Red;
+        }
+
+        .burger {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            cursor: pointer;
+            z-index: 5555;
+
+            div {
+                width: 46px;
+                margin: 5px;
+                height: 5px;
+                background-color: $White;
+                transition: all 0.3s linear;
+
+                &:nth-child(2) {
+                    width: 34px;
+                }
+            }
+        }
+    }
+}
+
+#services {
+    height: 100vh;
+}
+
+.circle1 {
+    position: absolute;
+    top: 52px;
+    left: 520px;
+    height: 30px;
+    width: 30px;
+    background: red;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 1;
+}
+
+.circle2 {
+    position: absolute;
+    top: 515px;
+    left: 420px;
+    height: 30px;
+    width: 30px;
+    background: red;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 1;
+}
+
+.circle3 {
+    position: absolute;
+    top: 826px;
+    left: 486px;
+    height: 150px;
+    width: 150px;
+    background: white;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 0.4;
+}
+
+.circle4 {
+    position: absolute;
+    top: 67px;
+    left: 865px;
+    height: 62px;
+    width: 62px;
+    background: white;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 0.4;
+}
+
+.circle5 {
+    position: absolute;
+    top: 350px;
+    left: 1030px;
+    height: 30px;
+    width: 30px;
+    background: red;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 1;
+}
+
+.circle6 {
+    position: absolute;
+    top: 720px;
+    left: 1040px;
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 0.4;
+}
+
+.circle7 {
+    position: absolute;
+    top: 560px;
+    left: 1660px;
+    height: 150px;
+    width: 150px;
+    background: white;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 0.9;
+}
+
+.circle8 {
+    position: absolute;
+    top: 570px;
+    left: 1330px;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 0.4;
+}
+
+.circle9 {
+    position: absolute;
+    top: 560px;
+    left: 775px;
+    height: 50px;
+    width: 50px;
+    background: red;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 0.4;
+}
+
+.circle10 {
+    position: absolute;
+    top: 900px;
+    left: 1500px;
+    height: 50px;
+    width: 50px;
+    background: red;
+    border-radius: 50%;
+    z-index: 99999;
+    opacity: 0.4;
+}
+
+@import "./responsive";
+@import "./fonts"

@@ -1,0 +1,13 @@
+@mixin paddingSides ($size){
+    padding-left: $size;
+    padding-right: $size;
+}
+@mixin marginSides ($size) {
+    margin-left: $size;
+    margin-right: $size;
+}
+@mixin  flexbox ($value1, $value2){
+    display: flex;
+    justify-content: $value1;
+    align-items: $value2;
+}

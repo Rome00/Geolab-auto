@@ -1,0 +1,449 @@
+.custom-header {
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.custom-header .control-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom-header .carousel-control-next,
+.custom-header .carousel-control-prev {
+  height: 208px;
+  width: 208px;
+  top: 40%;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.custom-header .carousel-control-prev {
+  left: -104px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.custom-header .carousel-control-prev .carousel-control-prev-icon {
+  background-image: url("../images/left.png");
+  height: 30px;
+  width: 30px;
+  margin-right: 40px;
+}
+
+.custom-header .carousel-control-next {
+  right: -104px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.custom-header .carousel-control-next .carousel-control-next-icon {
+  background-image: url("../images/right.png");
+  height: 30px;
+  width: 30px;
+  margin-left: 40px;
+}
+
+.custom-header .carousel-item {
+  height: 100vh;
+}
+
+.custom-header .carousel-item img {
+  height: 100%;
+  width: 100%;
+}
+
+.custom-header .carousel-item .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 45px;
+  bottom: 45px;
+}
+
+.custom-header .carousel-item .date p:first-child {
+  font-family: 'Roboto Condensed';
+  font-size: 72px;
+  color: #fff;
+}
+
+.custom-header .carousel-item .date p {
+  font-family: 'Roboto Light';
+  font-size: 38px;
+  color: #fff;
+}
+
+.custom-header .navbar {
+  position: absolute;
+  top: 0;
+  padding: 30px 30px 0 30px;
+  max-height: 190px;
+  z-index: 99999;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.custom-header .navbar .navbar-brand {
+  max-height: 150px;
+  height: 100px;
+  width: auto;
+  margin-top: -6px;
+  z-index: 33333;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.custom-header .navbar .navbar-brand .logo-img {
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-header .navbar .navbar-brand .hidden {
+  opacity: 0;
+}
+
+.custom-header .navbar .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 0;
+  background: gray;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-header .navbar .navbar-nav .nav-item {
+  margin-left: 280px;
+}
+
+.custom-header .navbar .navbar-nav .nav-link {
+  font-family: 'Roboto Condensed';
+  font-size: 72px;
+  color: #000;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.custom-header .navbar .navbar-nav-active {
+  height: 100vh;
+  opacity: 0.9;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-header .navbar .Burgeractive .line1 {
+  -webkit-transform: rotate(-45deg) translate(-16px, 16px);
+          transform: rotate(-45deg) translate(-16px, 16px);
+  background: #ff0000;
+}
+
+.custom-header .navbar .Burgeractive .line2 {
+  z-index: 99999;
+  opacity: 0;
+}
+
+.custom-header .navbar .Burgeractive .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+  background: #ff0000;
+}
+
+.custom-header .navbar .burger {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: pointer;
+  z-index: 5555;
+}
+
+.custom-header .navbar .burger div {
+  width: 46px;
+  margin: 5px;
+  height: 5px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.custom-header .navbar .burger div:nth-child(2) {
+  width: 34px;
+}
+
+#services {
+  height: 100vh;
+}
+
+.circle1 {
+  position: absolute;
+  top: 52px;
+  left: 520px;
+  height: 30px;
+  width: 30px;
+  background: red;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 1;
+}
+
+.circle2 {
+  position: absolute;
+  top: 515px;
+  left: 420px;
+  height: 30px;
+  width: 30px;
+  background: red;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 1;
+}
+
+.circle3 {
+  position: absolute;
+  top: 826px;
+  left: 486px;
+  height: 150px;
+  width: 150px;
+  background: white;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0.4;
+}
+
+.circle4 {
+  position: absolute;
+  top: 67px;
+  left: 865px;
+  height: 62px;
+  width: 62px;
+  background: white;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0.4;
+}
+
+.circle5 {
+  position: absolute;
+  top: 350px;
+  left: 1030px;
+  height: 30px;
+  width: 30px;
+  background: red;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 1;
+}
+
+.circle6 {
+  position: absolute;
+  top: 720px;
+  left: 1040px;
+  height: 30px;
+  width: 30px;
+  background: white;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0.4;
+}
+
+.circle7 {
+  position: absolute;
+  top: 560px;
+  left: 1660px;
+  height: 150px;
+  width: 150px;
+  background: white;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0.9;
+}
+
+.circle8 {
+  position: absolute;
+  top: 570px;
+  left: 1330px;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0.4;
+}
+
+.circle9 {
+  position: absolute;
+  top: 560px;
+  left: 775px;
+  height: 50px;
+  width: 50px;
+  background: red;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0.4;
+}
+
+.circle10 {
+  position: absolute;
+  top: 900px;
+  left: 1500px;
+  height: 50px;
+  width: 50px;
+  background: red;
+  border-radius: 50%;
+  z-index: 99999;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 1400px) {
+  .custom-header .carousel-control-next,
+  .custom-header .carousel-control-prev {
+    height: 190px;
+    width: 190px;
+  }
+  .custom-header .carousel-control-prev {
+    left: -95px;
+  }
+  .custom-header .carousel-control-next {
+    right: -95px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .custom-header .carousel-control-next,
+  .custom-header .carousel-control-prev {
+    height: 160px;
+    width: 160px;
+  }
+  .custom-header .carousel-control-prev {
+    left: -80px;
+  }
+  .custom-header .carousel-control-next {
+    right: -80px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .custom-header .carousel-control-next,
+  .custom-header .carousel-control-prev {
+    height: 140px;
+    width: 140px;
+  }
+  .custom-header .carousel-control-prev {
+    left: -70px;
+  }
+  .custom-header .carousel-control-next {
+    right: -70px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .custom-header .carousel-control-next,
+  .custom-header .carousel-control-prev {
+    height: 120px;
+    width: 120px;
+  }
+  .custom-header .carousel-control-prev {
+    left: -60px;
+  }
+  .custom-header .carousel-control-next {
+    right: -60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom-header .carousel-control-next,
+  .custom-header .carousel-control-prev {
+    height: 100px;
+    width: 100px;
+  }
+  .custom-header .carousel-control-prev {
+    left: -50px;
+  }
+  .custom-header .carousel-control-next {
+    right: -50px;
+  }
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url("../fonts/Roboto-Light.eot");
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.svg#Roboto-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url("../fonts/Roboto-Thin.eot");
+  src: local("Roboto Thin"), local("Roboto-Thin"), url("../fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto-Thin.ttf") format("truetype"), url("../fonts/Roboto-Thin.svg#Roboto-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro_Regular';
+  src: url("../fonts/MyriadPro-Regular.eot");
+  src: local("Myriad Pro"), local("MyriadPro-Regular"), url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro-Regular.woff2") format("woff2"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("../fonts/RobotoCondensed-Bold.eot");
+  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("../fonts/RobotoCondensed-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff"), url("../fonts/RobotoCondensed-Bold.ttf") format("truetype"), url("../fonts/RobotoCondensed-Bold.svg#RobotoCondensed-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+/*# sourceMappingURL=style.css.map */
