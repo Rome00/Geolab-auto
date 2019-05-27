@@ -30,7 +30,6 @@
             p {
                 font-family: 'Roboto Condensed';
                 font-size: 50px;
-                padding-top: 70px;
             }
         }
     }
@@ -85,6 +84,28 @@
 
             .carousel-control-next-icon {
                 margin-left: 30px;
+            }
+        }
+    }
+
+    #services .services-wrapper {
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+        .content-box {
+            background: #EBE8DE;
+            padding: 40px 40px;
+            display: flex;
+
+            .image-box {
+                height: 150px;
+                width: 130px;
+                margin: auto;
+            }
+
+            p {
+                font-family: 'Roboto Condensed';
+                font-size: 30px;
             }
         }
     }
