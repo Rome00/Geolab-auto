@@ -15,6 +15,25 @@
             right: -95px;
         }
     }
+
+    .services-wrapper {
+        padding-top: 100px;
+
+        .content-box {
+            background: #EBE8DE;
+            padding: 70px 70px;
+            max-height: 380px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+                font-family: 'Roboto Condensed';
+                font-size: 50px;
+                padding-top: 70px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -27,11 +46,19 @@
         }
 
         .carousel-control-prev {
-            left: -80px;
+            left: -90px;
+
+            .carousel-control-prev-icon {
+                margin-right: 20px;
+            }
         }
 
         .carousel-control-next {
-            right: -80px;
+            right: -90px;
+
+            .carousel-control-next-icon {
+                margin-left: 20px;
+            }
         }
     }
 }
@@ -46,36 +73,29 @@
         }
 
         .carousel-control-prev {
-            left: -70px;
-        }
-
-        .carousel-control-next {
-            right: -70px;
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .custom-header {
-
-        .carousel-control-next,
-        .carousel-control-prev {
-            height: 120px;
-            width: 120px;
-        }
-
-        .carousel-control-prev {
             left: -60px;
+
+            .carousel-control-prev-icon {
+                margin-right: 30px;
+            }
         }
 
         .carousel-control-next {
             right: -60px;
+
+            .carousel-control-next-icon {
+                margin-left: 30px;
+            }
         }
     }
 }
 
 @media screen and (max-width: 768px) {
     .custom-header {
+        .navbar .navbar-brand {
+            max-height: 100px;
+            height: 70px;
+        }
 
         .carousel-control-next,
         .carousel-control-prev {
@@ -85,10 +105,40 @@
 
         .carousel-control-prev {
             left: -50px;
+
+            .carousel-control-prev-icon {
+                margin-right: 10px;
+            }
         }
 
         .carousel-control-next {
             right: -50px;
+
+            .carousel-control-next-icon {
+                margin-left: 10px;
+            }
         }
+
+        .navbar .navbar-nav {
+            @include flexbox(center, center);
+
+            .nav-item {
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .custom-header .carousel-item .date p:first-child {
+        font-family: 'Roboto Condensed';
+        font-size: 42px;
+        color: $White;
+    }
+
+    .custom-header .carousel-item .date p {
+        font-family: 'Roboto Condensed';
+        font-size: 22px;
+        color: $White;
     }
 }

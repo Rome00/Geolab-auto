@@ -1,7 +1,6 @@
 @import "./variables";
 @import "./mixin";
 
-
 .custom-header {
     @include paddingSides(0px);
     position: relative;
@@ -28,7 +27,7 @@
         justify-content: flex-end;
 
         .carousel-control-prev-icon {
-            background-image: url('../images/left.png');
+            background-image: url("../images/left.png");
             height: 30px;
             width: 30px;
             margin-right: 40px;
@@ -40,13 +39,12 @@
         justify-content: flex-start;
 
         .carousel-control-next-icon {
-            background-image: url('../images/right.png');
+            background-image: url("../images/right.png");
             height: 30px;
             width: 30px;
             margin-left: 40px;
         }
     }
-
 
     .carousel-item {
         height: 100vh;
@@ -64,13 +62,13 @@
             bottom: 45px;
 
             p:first-child {
-                font-family: 'Roboto Condensed';
+                font-family: "Roboto Condensed";
                 font-size: 72px;
                 color: $White;
             }
 
             p {
-                font-family: 'Roboto Light';
+                font-family: "Roboto Light";
                 font-size: 38px;
                 color: $White;
             }
@@ -112,7 +110,7 @@
         .navbar-nav {
             @include flexbox(center, flex-start);
             flex-direction: column;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             height: 100px;
@@ -127,7 +125,7 @@
             }
 
             .nav-link {
-                font-family: 'Roboto Condensed';
+                font-family: "Roboto Condensed";
                 font-size: 72px;
                 color: $Black;
                 transition: all 1s ease-in-out;
@@ -141,18 +139,17 @@
         }
 
         .Burgeractive .line1 {
-            transform: rotate(-45deg) translate(-16px, 16px);
+            transform: rotate(-45deg) translate(-13px, 10px);
             background: $Red;
         }
 
         .Burgeractive .line2 {
-
             z-index: 99999;
             opacity: 0;
         }
 
         .Burgeractive .line3 {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-6px, -5px);
             background: $Red;
         }
 
@@ -167,14 +164,14 @@
             z-index: 5555;
 
             div {
-                width: 46px;
-                margin: 5px;
-                height: 5px;
+                width: 40px;
+                margin: 4px;
+                height: 4px;
                 background-color: $White;
                 transition: all 0.3s linear;
 
                 &:nth-child(2) {
-                    width: 34px;
+                    width: 30px;
                 }
             }
         }
@@ -182,6 +179,55 @@
 }
 
 #services {
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    @include paddingSides(0px);
+
+    h1 {
+        font-family: 'Roboto Condensed';
+        font-size: 50px;
+        padding-top: 110px;
+    }
+
+    .services-baner {
+        @include paddingSides(0px);
+        margin-top: 50px;
+        height: 250px;
+        background-image: url('../images/services-baner.png');
+        background-position: bottom center;
+        background-size: cover;
+
+        .horizontal {
+            position: absolute;
+            right: 250px;
+            bottom: 0;
+        }
+
+    }
+
+    .services-wrapper {
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+        .content-box {
+            background: #EBE8DE;
+            padding: 70px 70px;
+            max-height: 380px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+                font-family: 'Roboto Condensed';
+                font-size: 50px;
+                padding-top: 70px;
+            }
+        }
+    }
+}
+
+#contact {
     height: 100vh;
 }
 
@@ -306,4 +352,4 @@
 }
 
 @import "./responsive";
-@import "./fonts"
+@import "./fonts";

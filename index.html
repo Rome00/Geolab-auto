@@ -83,7 +83,34 @@
             </div>
         </div>
     </header>
-    <section class="container-fluid" id="services"></section>
+    <section class="container-fluid" id="services">
+        <h1 class="text-dark text-center">THE CORNER GARAGE FOR COLLECTOR CARS</h1>
+        <div class="container services-wrapper">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="content-box"><img class="img-fluid" src="images/services.png" alt="services">
+                        <p class="text-center">services</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-offset-1">
+                    <div class="content-box"><img class="img-fluid" src="images/buy.png" alt="buy">
+                        <p class="text-center">buy</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="content-box"><img class="img-fluid" src="images/repair.png" alt="modify">
+                        <p class="text-center">modify</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid services-baner">
+            <div class="horizontal">
+                <img src="images/car.png" alt="car">
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="contact"></section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -94,8 +121,22 @@
     </script>
     <script src="js/rellax.min.js"></script>
     <script>
-        // Accepts any class name
         var rellax = new Rellax('.rellax');
+        var rellax = new Rellax('.horizontal', {
+            vertical: false,
+            horizontal: true,
+            speed: 7
+        });
+    </script>
+    <script src="js/jquery.paroller.js"></script>
+    <script>
+        $(".horizontal, [data-paroller-factor]").paroller({
+            factor: 1.2, // multiplier for scrolling speed and offset, +- values for direction control  
+            factorLg: 0.4, // multiplier for scrolling speed and offset if window width is less than 1200px, +- values for direction control  
+            type: 'foreground', // background, foreground  
+            direction: 'horizontal', // vertical, horizontal  
+            transition: 'translate 0.5s ease' // CSS transition, added on elements where type:'foreground' 
+        });
     </script>
     <script src="js/app.js"></script>
 </body>
