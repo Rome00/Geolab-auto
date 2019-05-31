@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f43178f547.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -47,79 +48,212 @@
                 <div class="line3"></div>
             </div>
         </nav>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/car-baner.png" alt="slide1">
-                    <div class="date">
-                        <p>27.11</p>
-                        <p>Vintage Auto Exhibition</p>
-                    </div>
+        <div class="container-fluid full-slider no-padding">
+            <div class="slider fullscreen">
+                <ul class="slides">
+                    <li>
+                        <img src="images/car-baner.png" alt="car">
+                        <div class="caption right-align mt-5">
+                            <h3>27.03</h3>
+                            <h5 class="medium white-text text-lighten-3">Vintage Auto Exhibition</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/car-baner-2.jpg" alt="car">
+                        <div class="caption right-align mt-5">
+                            <h3>29.04</h3>
+                            <h5 class="medium white-text text-lighten-3">Vintage Auto Exhibition</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/car-baner-3.jpg" alt="car">
+                        <div class="caption right-align mt-5">
+                            <h3>14.06</h3>
+                            <h5 class="medium white-text text-lighten-3">Vintage Auto Exhibition</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/car-baner-4.jpg" alt="car">
+                        <div class="caption right-align mt-5">
+                            <h3>16.09</h3>
+                            <h5 class="medium white-text text-lighten-3">Vintage Auto Exhibition</h5>
+                        </div>
+                    </li>
+                </ul>
+                <div class="prev">
+                    <i class="pr-xl-4 pr-lg-2 pr-md-1 pr-sm-1 material-icons">arrow_right_alt</i>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/car-baner.png" alt="slide1">
-                    <div class="date">
-                        <p>27.11</p>
-                        <p>Vintage Auto Exhibition</p>
-                    </div>
+                <div class="next">
+                    <i class="pr-xl-4 pr-lg-2 pr-md-1 pr-sm-1 material-icons">arrow_right_alt</i>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/car-baner.png" alt="slide2">
-                    <div class="date">
-                        <p>27.11</p>
-                        <p>Vintage Auto Exhibition</p>
-                    </div>
-                </div>
-            </div>
-            <div class="control-wrapper">
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
     </header>
     <section class="container-fluid" id="services">
-        <h1 class="text-dark text-center">THE CORNER GARAGE FOR COLLECTOR CARS</h1>
-        <div class="container services-wrapper">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="content-box">
-                        <div class="image-box">
-                            <img class="img-fluid" src="images/services.png" alt="services">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-dark text-center">THE CORNER GARAGE FOR COLLECTOR CARS</h1>
+                <div class="container services-wrapper">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="content-box">
+                                <div class="image-box mt-5">
+                                    <img class="img-fluid" src="images/services.png" alt="services">
+                                </div>
+                                <p class="text-center">services</p>
+                            </div>
                         </div>
-                        <p class="text-center">services</p>
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mt-md-0">
+                            <div class="content-box">
+                                <div class="image-box mt-5">
+                                    <img class="img-fluid" src="images/buy.png" alt="buy">
+                                </div>
+                                <p class="text-center">buy</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mt-md-0">
+                            <div class="content-box">
+                                <div class="image-box mt-5">
+                                    <img class="img-fluid" src="images/repair.png" alt="modify">
+                                </div>
+                                <p class="text-center">modify</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mt-md-0">
-                    <div class="content-box">
-                        <div class="image-box">
-                            <img class="img-fluid" src="images/buy.png" alt="buy">
-                        </div>
-                        <p class="text-center">buy</p>
+                <div class="container-fluid services-baner">
+                    <div class="horizontal">
+                        <img src="images/car.png" alt="car">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mt-md-0">
-                    <div class="content-box">
-                        <div class="image-box">
-                            <img class="img-fluid" src="images/repair.png" alt="modify">
-                        </div>
-                        <p class="text-center">modify</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid services-baner">
-            <div class="horizontal">
-                <img src="images/car.png" alt="car">
             </div>
         </div>
     </section>
-    <section class="container-fluid" id="contact"></section>
+    <section class="container-fluid pb-1" id="contact">
+        <div class="container-fluid pt-5 map">
+            <div class="row no-bottom">
+                <div class="col-12">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container form-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <div class="contact-forms">
+                        <div class="row d-flex flex-column-reverse flex-lg-row">
+                            <div class="col-12 padd-0-0 col-lg-4 d-flex justify-content-between flex-column bg-contact">
+                                <div class="d-none d-lg-block">
+                                    <h1 class="no-margin">contact information</h1>
+                                </div>
+                                <div
+                                    class="icons d-flex flex-lg-column flex-row justify-content-between align-items-center mt-3 mt-lg-0">
+                                    <p>click to view</p>
+                                    <div class="icon-wrapper d-flex pb-3">
+                                        <div class="ml-3 "><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                                        <div class="ml-3 "><a href="#"><i class="fab fa-twitter"></i></a></div>
+                                        <div class="ml-3 "><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-8 bg-form">
+                                <h1>get in touch</h1>
+                                <form action="/sbmit.php" method="POST">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 form-group line-1">
+                                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                                <span id="span-name">Please write your Name</span>
+                                                <input type="email" class="form-control" id="mail" placeholder="Email">
+                                                <span id="span-mail">Please write your Mail</span>
+                                                <input type="text" class="form-control" id="subject"
+                                                    placeholder="subject">
+                                                <span id="span-subject">Please write Subject</span>
+                                                <textarea class="form-control" id="textarea" rows="4 "
+                                                    placeholder="text"></textarea>
+                                                <span id="span-text">Please write text</span>
+                                            </div>
+                                            <div class="col-12 col-sm-6 line-2">
+                                                <div class="row">
+                                                    <div class="col-11 padd-0-0 offset-1">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="inlineRadioOptions" id="inlineRadio1"
+                                                                value="option1" checked>
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio1">male</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="inlineRadioOptions" id="inlineRadio2"
+                                                                value="option2">
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio2">female</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 padd-0-0 news-forms">
+                                                        <fieldset>
+                                                            <legend>Sign up for newsletter:</legend>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="checkbox1">
+                                                                <label class="form-check-label" for="checkbox1">
+                                                                    recive images
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="checkbox2">
+                                                                <label class="form-check-label" for="checkbox2">
+                                                                    recive promotions
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="checkbox3">
+                                                                <label class="form-check-label" for="checkbox3">
+                                                                    recive updates
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="checkbox4">
+                                                                <label class="form-check-label" for="checkbox4">
+                                                                    recive job offers
+                                                                </label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="submit  mb-3  mt-3">
+                                                <span id="success">Thank you for your intereset for us, your message has
+                                                    been sent!</span>
+                                                <input type="submit" class="btn btn-primary"></input>
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="fontainer-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="copy">
+                        <span>&copy; copyrights 2019</span>
+                    </div>
+                    <div class="footer-text">
+                        <span>created by Romeo Khazalia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -127,6 +261,38 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 41.717570,
+                    lng: 44.785019
+                },
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9F_nKivS7VMmuWxhuQwqYHOish3i3jkY&callback=initMap"
+        async defer></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider({
+                fullWidth: true,
+                duration: 600,
+                indicators: false
+            });
+            $('.prev').click(function () {
+                $('.slider').slider('prev');
+            });
+            $('.next').click(function () {
+                $('.slider').slider('next');
+            });
+
+        });
     </script>
     <script src="js/rellax.min.js"></script>
     <script>

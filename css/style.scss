@@ -7,172 +7,158 @@
     height: 100vh;
     overflow: hidden;
 
-    .control-wrapper {
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .carousel-control-next,
-    .carousel-control-prev {
-        height: 208px;
-        width: 208px;
-        top: 40%;
-        border-radius: 50%;
-        background: #fff;
-    }
-
-    .carousel-control-prev {
-        left: -104px;
-        justify-content: flex-end;
-
-        .carousel-control-prev-icon {
-            background-image: url("../images/left.png");
-            height: 30px;
-            width: 30px;
-            margin-right: 40px;
-        }
-    }
-
-    .carousel-control-next {
-        right: -104px;
-        justify-content: flex-start;
-
-        .carousel-control-next-icon {
-            background-image: url("../images/right.png");
-            height: 30px;
-            width: 30px;
-            margin-left: 40px;
-        }
-    }
-
-    .carousel-item {
+    .full-slider .slider {
         height: 100vh;
 
-        img {
-            height: 100%;
-            width: 100%;
+        .caption h3 {
+            font-family: "Roboto Condensed";
+            font-size: 72px;
         }
 
-        .date {
-            @include flexbox(space-around, flex-end);
-            flex-direction: column;
+        .caption h5 {
+            font-family: "Roboto Light";
+            font-size: 38px;
+        }
+
+        .prev,
+        .next {
             position: absolute;
-            right: 45px;
-            bottom: 45px;
+            top: 37%;
+            height: 200px;
+            width: 200px;
+            background: rgba(241, 241, 241, 0.5);
+            z-index: 99999;
+            cursor: pointer;
+            @include flexbox(flex-end, center);
 
-            p:first-child {
-                font-family: "Roboto Condensed";
-                font-size: 72px;
-                color: $White;
+            i {
+                font-size: 52px;
             }
 
-            p {
-                font-family: "Roboto Light";
-                font-size: 38px;
-                color: $White;
+            &:hover,
+            &:focus,
+            &:active {
+                background: rgba(241, 241, 241, 0.9);
             }
+        }
+
+        .prev {
+            left: 0;
+            transform: rotate(180deg);
+            clip-path: circle(50% at 100% 50%);
+        }
+
+        .next {
+            right: 0;
+            clip-path: circle(50% at 100% 50%);
+        }
+    }
+}
+
+
+.navbar {
+    position: absolute;
+    top: 0;
+    padding: 30px 30px 0 30px;
+    max-height: 190px;
+    z-index: 99999;
+    align-items: end;
+
+    .navbar-brand {
+        max-height: 150px;
+        height: 100px;
+        width: auto;
+        margin-top: -6px;
+        z-index: 33333;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
+        .logo-img {
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .hidden {
+            opacity: 0;
         }
     }
 
-    .navbar {
-        position: absolute;
+    .navbar-nav {
+        display: none;
+        @include flexbox(center, flex-start);
+        flex-direction: column;
+        position: fixed;
         top: 0;
-        padding: 30px 30px 0 30px;
-        max-height: 190px;
+        left: 0;
+        height: 0px;
+        width: 100%;
+        z-index: 0;
+        background: gray;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+
+        .nav-item {
+            margin-left: 280px;
+        }
+
+        .nav-link {
+            font-family: "Roboto Condensed";
+            font-size: 72px;
+            color: $Black;
+            transition: all 1s ease-in-out;
+            pointer-events: none;
+        }
+
+        .nav-link-active {
+            pointer-events: auto;
+        }
+    }
+
+    .navbar-nav-active {
+        height: 100vh;
+        opacity: 0.9;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .Burgeractive .line1 {
+        transform: rotate(-45deg) translate(-13px, 10px);
+        background: $Red;
+    }
+
+    .Burgeractive .line2 {
         z-index: 99999;
-        align-items: end;
+        opacity: 0;
+    }
 
-        .navbar-brand {
-            max-height: 150px;
-            height: 100px;
-            width: auto;
-            margin-top: -6px;
-            z-index: 33333;
-            position: absolute;
-            top: 30px;
-            left: 30px;
+    .Burgeractive .line3 {
+        transform: rotate(45deg) translate(-6px, -5px);
+        background: $Red;
+    }
 
-            .logo-img {
-                display: block;
-                position: absolute;
-                top: 0;
-                height: 100%;
-                opacity: 1;
-                transition: all 0.5s ease-in-out;
-            }
+    .burger {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+        z-index: 5555;
 
-            .hidden {
-                opacity: 0;
-            }
-        }
+        div {
+            width: 40px;
+            margin: 4px;
+            height: 4px;
+            background-color: $White;
+            transition: all 0.3s linear;
 
-        .navbar-nav {
-            @include flexbox(center, flex-start);
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100px;
-            width: 100%;
-            z-index: 0;
-            background: gray;
-            opacity: 0;
-            transition: all 0.5s ease-in-out;
-
-            .nav-item {
-                margin-left: 280px;
-            }
-
-            .nav-link {
-                font-family: "Roboto Condensed";
-                font-size: 72px;
-                color: $Black;
-                transition: all 1s ease-in-out;
-            }
-        }
-
-        .navbar-nav-active {
-            height: 100vh;
-            opacity: 0.9;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .Burgeractive .line1 {
-            transform: rotate(-45deg) translate(-13px, 10px);
-            background: $Red;
-        }
-
-        .Burgeractive .line2 {
-            z-index: 99999;
-            opacity: 0;
-        }
-
-        .Burgeractive .line3 {
-            transform: rotate(45deg) translate(-6px, -5px);
-            background: $Red;
-        }
-
-        .burger {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            cursor: pointer;
-            z-index: 5555;
-
-            div {
-                width: 40px;
-                margin: 4px;
-                height: 4px;
-                background-color: $White;
-                transition: all 0.3s linear;
-
-                &:nth-child(2) {
-                    width: 30px;
-                }
+            &:nth-child(2) {
+                width: 30px;
             }
         }
     }
@@ -184,35 +170,40 @@
     overflow: hidden;
     @include paddingSides(0px);
 
+    .col-12 {
+        @include flexbox(start, center);
+        flex-direction: column;
+    }
+
     h1 {
         font-family: 'Roboto Condensed';
-        font-size: 50px;
-        padding-top: 110px;
+        font-size: 36px;
+        padding-top: 1rem;
     }
 
     .services-baner {
         @include paddingSides(0px);
         margin-top: 50px;
-        height: 250px;
+        height: 290px;
         background-image: url('../images/services-baner.png');
         background-position: bottom center;
+        background-repeat: no-repeat;
         background-size: cover;
 
         .horizontal {
             position: absolute;
-            right: 250px;
+            right: 500px;
             bottom: 0;
         }
 
     }
 
     .services-wrapper {
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
 
         .content-box {
             background: #EBE8DE;
-            padding: 70px 70px;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -232,7 +223,154 @@
 }
 
 #contact {
-    height: 100vh;
+    position: relative;
+
+    .map::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .form-wrapper {
+        position: absolute;
+        bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+
+        .row {
+            margin-bottom: 0;
+        }
+    }
+
+    .contact-forms .row {
+
+        .bg-contact h1 {
+            font-family: 'Roboto Condensed';
+            font-size: 34px;
+            padding: 34px;
+            margin-bottom: 180px;
+            margin-top: 50px;
+            text-transform: uppercase;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .bg-form h1 {
+            font-family: 'Roboto Condensed';
+            font-size: 34px;
+            padding: 34px;
+            margin-top: 50px;
+            text-transform: uppercase;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .icon-wrapper {
+            float: right;
+
+            a,
+            a:hover {
+                color: #000;
+            }
+        }
+
+        .icons p {
+            text-align: center;
+            font-family: 'Roboto Condensed';
+            font-size: 40px;
+        }
+
+        .icon-wrapper div {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+
+    form {
+        font-family: 'Roboto Light';
+
+        .line-1 input {
+            background: #F2F2F2;
+            margin-bottom: 3px;
+        }
+
+        .line-1 span {
+            display: block;
+            font-size: 8px;
+            color: red;
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: 0;
+        }
+
+        .line-1 textarea {
+            resize: none;
+            background: #F2F2F2;
+        }
+
+        .news-forms {
+            margin-top: 100px;
+
+            fieldset {
+                padding: 0;
+            }
+
+            legend {
+                font-size: 14px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+        }
+
+        .submit {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            input {
+                background: #000;
+                float: right
+            }
+        }
+
+
+    }
+}
+
+#success {
+    font-family: 'Roboto Thin';
+    font-size: 10px;
+    width: 100%;
+    font-weight: 700;
+    float: left;
+    opacity: 0;
+    color: green;
+}
+
+#map {
+    border: 1px solid gray;
+    width: 100%;
+    height: 570px;
+
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+footer span {
+    display: block;
+    font-family: 'Roboto Thin';
+    font-size: 16px;
+    margin: 20px 0 10px 0;
 }
 
 .circle1 {
@@ -353,6 +491,31 @@
     border-radius: 50%;
     z-index: 99999;
     opacity: 0.4;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-bottom {
+    margin-bottom: 0;
+}
+
+.padd-0-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.padd-0 {
+    padding-left: 0;
+}
+
+.bg-contact {
+    background: #EBE8DE;
+}
+
+.bg-form {
+    background: #FFFFFF;
 }
 
 @import "./responsive";
